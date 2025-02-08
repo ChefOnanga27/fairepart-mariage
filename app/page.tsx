@@ -3,20 +3,20 @@ import Image from "next/image";
 export default function FairePartMariage() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-green-600 via-emerald-400 to-green-600 p-6">
-      <div className="w-full max-w-4xl bg-white shadow-2xl rounded-3xl overflow-hidden animate-fadeIn border-8 border-green-800 relative">
+      <div className="w-full max-w-4xl bg-white shadow-2xl rounded-3xl overflow-hidden animate-fadeIn border-8 border-emerald-700 relative">
         
         {/* Image en couverture avec animation */}
         <div className="relative h-80 md:h-96">
           <Image
-            src="/love.jpg"
-            alt="Alec et Vendrelle"
+            src="/love.jpg" // Utilise une image de qualité supérieure
+            alt="Le couple Alec et Vendrelle"
             layout="fill"
             objectFit="cover"
-            className="animate-zoomIn"
+            className="animate-zoomIn rounded-t-3xl"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-          <h1 className="absolute bottom-6 left-0 right-0 text-center font-serif text-7xl font-extrabold text-emerald-500 drop-shadow-2xl animate-glow">
-            Alec <span className="text-red-600">&</span> Vendrelle
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-t-3xl"></div>
+          <h1 className="absolute bottom-6 left-0 right-0 text-center font-serif text-6xl font-extrabold text-emerald-300 drop-shadow-2xl animate-glow">
+            ONANGA <span className="text-red-600">&</span> Vous
           </h1>
         </div>
 
@@ -25,6 +25,27 @@ export default function FairePartMariage() {
           <p className="text-3xl text-red-700 italic font-light animate-slideUp">
             "L'amour est patient, l'amour est bon. Il n'envie pas, il ne se vante pas, il ne s'enfle pas d'orgueil."
           </p>
+
+          {/* Message principal */}
+          <div className="bg-green-100 rounded-xl p-6 shadow-md border-4 border-emerald-600 relative">
+            <p className="text-2xl font-semibold text-green-800">
+              Le couple Alec et Emeraude est heureux de vous annoncer leur mariage religieux, coutumier et civil prévu cette année.
+            </p>
+            <p className="text-lg text-gray-700 mt-4">
+              Votre présence, ainsi que toute aide physique, financière ou matérielle, sera grandement appréciée pour faire de cet événement un moment inoubliable.
+            </p>
+          </div>
+
+          {/* Description des cérémonies */}
+          <div className="bg-green-100 rounded-xl p-6 shadow-md border-4 border-emerald-600">
+            <p className="text-2xl font-semibold text-green-800">Nos Cérémonies</p>
+            <p className="text-lg text-gray-700 mt-4">
+              Le mariage débutera par une cérémonie religieuse suivie d'une cérémonie coutumière traditionnelle. Ensuite, nous aurons la cérémonie civile pour officialiser notre union devant la loi.
+            </p>
+            <p className="text-lg text-gray-700 mt-4">
+              Nous serions honorés de vous avoir à nos côtés pour chacune de ces étapes importantes de notre vie.
+            </p>
+          </div>
 
           {/* Date et lieu avec GIF animé */}
           <div className="text-white text-3xl font-semibold animate-slideUp bg-green-700 rounded-lg p-6 shadow-lg border-4 border-emerald-500 relative">
@@ -41,23 +62,14 @@ export default function FairePartMariage() {
 
           {/* Message aux invités */}
           <p className="text-gray-700 text-lg leading-relaxed animate-fadeIn">
-            Le couple Alec et Vendrelle est heureux de vous faire part de leur union à travers trois cérémonies : 
-            le mariage religieux, le mariage coutumier et le mariage civil, qui se dérouleront cette année. 
-            Ce moment important de nos vies serait incomplet sans la présence de ceux qui nous sont chers. 
-            Votre participation, qu'elle soit physique, financière ou matérielle, serait une précieuse contribution à la réussite de cet événement. 
-            Nous comptons sur votre soutien et votre présence pour célébrer cette journée inoubliable.
+            Chers amis et famille, nous vous invitons à être témoins de ce moment de bonheur et d'unité. 
+            Votre présence sera la plus belle des contributions, et ensemble, nous ferons de cette journée une célébration pleine d'amour et de joie.
           </p>
 
           {/* Dress Code */}
           <div className="border-t border-b border-green-700 py-4 animate-pulse bg-green-200 rounded-lg shadow-md p-4">
             <p className="text-xl font-semibold text-green-900">🎩 Dress Code</p>
             <p className="text-gray-700">Tenue de soirée élégante</p>
-          </div>
-
-          {/* Confirmation avec effet doré */}
-          <div className="bg-gradient-to-r from-emerald-500 to-emerald-700 text-white py-6 px-10 rounded-xl shadow-xl animate-bounce border-4 border-green-800">
-            <p className="text-lg font-bold">Merci de confirmer votre présence avant le 1er mai 2024</p>
-            <p className="text-sm mt-2">📧 nangbiteghe@gmail.com | 📞 241 74692348 / 74162584</p>
           </div>
         </div>
       </div>
