@@ -16,7 +16,7 @@ export default function FairePartMariage() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-t-3xl"></div>
           <h1 className="absolute bottom-6 left-0 right-0 text-center font-serif text-6xl font-extrabold text-emerald-300 drop-shadow-2xl animate-glow">
-            ONANGA <span className="text-red-600">&</span> Vous
+            Alec<span className="text-red-600">&</span> Emeraude
           </h1>
         </div>
 
