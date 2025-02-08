@@ -49,7 +49,7 @@ export default function FairePartMariage() {
 
           {/* Date et lieu avec GIF animé */}
           <div className="text-white text-3xl font-semibold animate-slideUp bg-green-700 rounded-lg p-6 shadow-lg border-4 border-emerald-500 relative">
-            <p className="text-5xl font-extrabold text-amber-300">26 Juin 2024</p>
+            <p className="text-5xl font-extrabold text-amber-300"> 2024</p>
             <p className="text-xl mt-1">📍 Setrag, Owendo</p>
             <Image 
               src="/love1.png" 
