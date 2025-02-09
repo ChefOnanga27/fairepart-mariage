@@ -1,78 +1,115 @@
+"use client";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function FairePartMariage() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-green-600 via-emerald-400 to-green-600 p-6">
-      <div className="w-full max-w-4xl bg-white shadow-2xl rounded-3xl overflow-hidden animate-fadeIn border-8 border-emerald-700 relative">
-        
-        {/* Image en couverture avec animation */}
-        <div className="relative h-80 md:h-96">
-          <Image
-            src="/love.jpg" // Utilise une image de qualité supérieure
-            alt="Le couple Alec et Vendrelle"
-            layout="fill"
-            objectFit="cover"
-            className="animate-zoomIn rounded-t-3xl"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-t-3xl"></div>
-          <h1 className="absolute bottom-6 left-0 right-0 text-center font-serif text-6xl font-extrabold text-emerald-300 drop-shadow-2xl animate-glow">
-            Alec<span className="text-red-600">&</span> Emeraude
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6 space-y-8">
+      
+      {/* Section 1 - Annonce avec image de fond */}
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="w-full max-w-4xl text-center text-white py-12 px-6 rounded-lg shadow-lg bg-cover bg-center relative"
+        style={{ backgroundImage: "url('/emeraude.jpg')" }}
+      >
+        {/* Overlay pour lisibilité */}
+        <div className="absolute inset-0 bg-black bg-opacity-50 rounded-lg"></div>
+
+        {/* Contenu */}
+        <div className="relative z-10 bg-green-100/40">
+          <h1 className="text-3xl sm:text-4xl font-serif font-bold text-red-500 drop-shadow-lg">
+            Une Grande Nouvelle !
           </h1>
-        </div>
-
-        {/* Contenu principal */}
-        <div className="p-12 text-center space-y-8 animate-fadeIn bg-gradient-to-b from-white to-green-100 border-t-8 border-emerald-500">
-          <p className="text-3xl text-red-700 italic font-light animate-slideUp">
-            "L'amour est patient, l'amour est bon. Il n'envie pas, il ne se vante pas, il ne s'enfle pas d'orgueil."
+          <p className="mt-4 text-lg sm:text-xl font-light drop-shadow-md">
+            L’amour unit les cœurs, et aujourd’hui, nous avons l’immense bonheur de partager avec vous 
+            un événement unique. Une union sacrée, un engagement éternel...
           </p>
-
-          {/* Message principal */}
-          <div className="bg-green-100 rounded-xl p-6 shadow-md border-4 border-emerald-600 relative">
-            <p className="text-2xl font-semibold text-green-800">
-              Le couple Alec et Emeraude est heureux de vous annoncer leur mariage religieux, coutumier et civil prévu cette année.
-            </p>
-            <p className="text-lg text-gray-700 mt-4">
-              Votre présence, ainsi que toute aide physique, financière ou matérielle, sera grandement appréciée pour faire de cet événement un moment inoubliable.
-            </p>
-          </div>
-
-          {/* Description des cérémonies */}
-          <div className="bg-green-100 rounded-xl p-6 shadow-md border-4 border-emerald-600">
-            <p className="text-2xl font-semibold text-green-800">Nos Cérémonies</p>
-            <p className="text-lg text-gray-700 mt-4">
-              Le mariage débutera par une cérémonie religieuse suivie d'une cérémonie coutumière traditionnelle. Ensuite, nous aurons la cérémonie civile pour officialiser notre union devant la loi.
-            </p>
-            <p className="text-lg text-gray-700 mt-4">
-              Nous serions honorés de vous avoir à nos côtés pour chacune de ces étapes importantes de notre vie.
-            </p>
-          </div>
-
-          {/* Date et lieu avec GIF animé */}
-          <div className="text-white text-3xl font-semibold animate-slideUp bg-green-700 rounded-lg p-6 shadow-lg border-4 border-emerald-500 relative">
-            <p className="text-5xl font-extrabold text-amber-300"> 2024</p>
-            <p className="text-xl mt-1">📍 Setrag, Owendo</p>
-            <Image 
-              src="/love1.png" 
-              alt="Cœurs animés" 
-              width={70} 
-              height={70} 
-              className="absolute -top-5 right-5 animate-float"
-            />
-          </div>
-
-          {/* Message aux invités */}
-          <p className="text-gray-700 text-lg leading-relaxed animate-fadeIn">
-            Chers amis et famille, nous vous invitons à être témoins de ce moment de bonheur et d'unité. 
-            Votre présence sera la plus belle des contributions, et ensemble, nous ferons de cette journée une célébration pleine d'amour et de joie.
-          </p>
-
-          {/* Dress Code */}
-          <div className="border-t border-b border-green-700 py-4 animate-pulse bg-green-200 rounded-lg shadow-md p-4">
-            <p className="text-xl font-semibold text-green-900">🎩 Dress Code</p>
-            <p className="text-gray-700">Tenue de soirée élégante</p>
-          </div>
+          <p className="mt-6 font-semibold text-2xl drop-shadow-lg">Alec & Vendrelle</p>
         </div>
-      </div>
+      </motion.div>
+
+      {/* Section 2 - Invitation et demande de soutien */}
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, delay: 0.3 }}
+        className="w-full max-w-4xl bg-white/50 shadow-lg rounded-lg p-6 border border-emerald-500 text-center"
+      >
+        <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-red-700 mb-4 drop-shadow-md">
+          Un Engagement Sacré
+        </h2>
+        <p className="text-gray-700 text-md sm:text-lg">
+          Alec & Vendrelle s’unissent devant Dieu pour célébrer leur amour et s’engager dans une 
+          vie remplie de bonheur et de bénédictions.
+        </p>
+        <p className="mt-4 text-gray-800 font-semibold">
+          Nous avons besoin de votre soutien : matériel, financier et surtout spirituel. 
+          Chaque geste, chaque prière compte pour nous accompagner dans cette belle aventure.
+        </p>
+
+        {/* Image animée et responsive */}
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="mt-6 flex justify-center"
+        >
+          <Image
+            src="/love4.jpg"
+            alt="Prières et bénédictions"
+            width={500}
+            height={300}
+            className="rounded-lg shadow-md w-full sm:w-[500px]"
+          />
+        </motion.div>
+      </motion.div>
+
+      {/* Section 3 - Date, lieu et remerciements */}
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, delay: 0.5 }}
+        className="w-full max-w-4xl bg-white shadow-lg rounded-lg p-6 border border-emerald-500 text-center"
+      >
+        <h2 className="text-2xl sm:text-3xl font-serif font-semibold text-emerald-900 mb-4 drop-shadow-md">
+          Les Informations
+        </h2>
+        <p className="text-gray-700 text-md sm:text-lg">
+          La cérémonie aura lieu au 
+          <span className="font-semibold text-emerald-800"> Palais Lumière</span>, 
+          à <span className="font-semibold">Setrag, Owendo</span>.
+        </p>
+        <p className="mt-2 font-semibold text-xl sm:text-2xl text-red-600 drop-shadow-md">
+          Samedi 28 août 2024 - 16h00
+        </p>
+        <p className="text-gray-600 text-sm sm:text-md mt-4">
+          Nous serions honorés de vous compter parmi nous.
+        </p>
+
+        {/* Image animée */}
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+          className="mt-6 flex justify-center"
+        >
+          <Image
+            src="/love3.jpg"
+            alt="Lieu de la cérémonie"
+            width={500}
+            height={300}
+            className="rounded-lg shadow-md w-full sm:w-[500px]"
+          />
+        </motion.div>
+
+        <p className="mt-6 text-gray-700 italic">Avec amour et gratitude,</p>
+        <p className="text-emerald-900 font-semibold text-lg sm:text-xl drop-shadow-md">
+          Alec & Vendrelle
+        </p>
+      </motion.div>
+      
     </div>
   );
 }

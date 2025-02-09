@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Mariage Alec & Vendrelle",
   description: "Faire-part",
+  icons: "/love1.png",
 };
 
 export default function RootLayout({
