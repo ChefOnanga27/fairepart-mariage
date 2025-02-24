@@ -82,7 +82,7 @@ export default function FairePartMariage() {
           à <span className="font-semibold">Setrag, Owendo</span>.
         </p>
         <p className="mt-2 font-semibold text-xl sm:text-2xl text-red-600 drop-shadow-md">
-          Samedi 28 août 2024 - 16h00
+          16 août 2024 - 16h00
         </p>
         <p className="text-gray-600 text-sm sm:text-md mt-4">
           Nous serions honorés de vous compter parmi nous.
